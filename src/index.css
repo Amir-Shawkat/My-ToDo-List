@@ -1,0 +1,209 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #1B1B1B;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-container{
+  background: #131314;
+  color: #E3E3D6;
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.addtask-container{
+  width:100%;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.addtask-container input{
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: #E3E3D6;
+  color: #131314;
+  font-size: 1rem;
+  border: none;
+}
+
+.addtask-container button{
+  padding: 10px 18px;
+  background-color: #E3E3D6;
+  color: #131314;
+  font-size: 1rem;;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.addtask-container button:hover{
+  opacity: 0.8;
+}
+
+.tasklist-container ul{
+  padding:0;
+}
+
+.tasklist {
+  list-style: none;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.tasklist:active {
+  cursor: grabbing;
+}
+
+.list:hover {
+  background: #2a2a2a;
+}
+
+.list{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #1f1f1f;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.addtext{
+  font-weight: bold;
+}
+
+.todo-text{
+  flex: 1;
+  word-break: break-word;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="checkbox"]{
+  cursor: pointer;
+}
+
+.action-buttons button, .save-btn{
+  background-color: #E3E3D6;
+  color:#131314;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.action-buttons button:hover,
+.save-btn:hover {
+  opacity: 0.85;
+}
+
+.edit-input{
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  animation: expand 0.5s ease;
+}
+
+.empty-state{
+  text-align: center;
+  opacity: 0.7;
+  margin-top: 30px;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.toolbar {
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.toolbar-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.toolbar-buttons button {
+  flex: 1;
+  padding: 8px 12px;
+  background-color: #E3E3D6;
+  color: #131314;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.search-box,
+.add-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: expand 0.5s ease;
+}
+
+.search-box input,
+.add-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #E3E3D6;
+  color:#131314;
+  font-size: 1rem;
+}
+
+/* Cancel button */
+.cancel-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #E3E3D6;
+}
+
+.add-btn {
+  padding: 10px 18px;
+  background-color: #E3E3D6;
+  color: #131314;
+  font-size: 1rem;;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+@keyframes expand {
+  from {
+    transform: scaleX(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
